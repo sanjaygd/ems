@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>User {{user.usernmae}} is successfuly logedin </p>
+<form method="POST" action="/logout/">{% csrf_token %}
+    <input type="submit" value="Logout">
+</form>
+
+{% endblock content %}
